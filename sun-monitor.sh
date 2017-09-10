@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo apt-get install -y jq
-sed -i 's/^sudo/#sudo/; s/^sed/#sed/' sun-monitor.sh
+sudo apt-get install -y jq; sed -i 's/^sudo/#sudo/' sun-monitor.sh	# Auto instalador do pacote JQ - necessário para execução do PARSE 
 
 kindex=$(curl -s 'http://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq '.[-1][1]' | sed 's/"//g')
 
@@ -15,10 +14,3 @@ else
 	sleep 2
 	firefox http://services.swpc.noaa.gov/images/planetary-k-index.gif
 fi
-
-
-
-
-
-
-
