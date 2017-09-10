@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt-get install -y jq
-sed -i 's/^sudo/#sudo/; s/^sed/#sed/'
+sed -i 's/^sudo/#sudo/; s/^sed/#sed/' sun-monitor.sh
 
 kindex=$(curl -s 'http://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq '.[-1][1]' | sed 's/"//g')
 
