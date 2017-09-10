@@ -1,5 +1,8 @@
 #!/bin/bash
 
+sudo apt-get install -y jq
+sed -i 's/^sudo/#sudo/; s/^sed/#sed/'
+
 kindex=$(curl -s 'http://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq '.[-1][1]' | sed 's/"//g')
 
 if [[ "$kindex" -gt "4" ]]
