@@ -11,7 +11,7 @@ texto = pagina.text
 arqjson = json.loads(texto)
 
 
-kindex=arqjson[-1][1]
+kindex = arqjson[-1][1]
 
 print()
 print("Último registro:", arqjson[-1])
