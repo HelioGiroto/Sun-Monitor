@@ -2,9 +2,9 @@
 ## Monitora explosões solares (pt-BR) - Monitorea explosiones solares (esp)
 
 ### No Terminal:
-curl -s http://services.swpc.noaa.gov/images/swx-overview-small.gif | display
+#####`curl -s http://services.swpc.noaa.gov/images/swx-overview-small.gif | display`
 
-curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/Gs_xr_1m.txt | tail 
+#####`curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/Gs_xr_1m.txt | tail` 
 
  <img src="http://services.swpc.noaa.gov/images/planetary-k-index.gif" alt="Kp Index" height="240" width="320"> 
  <img src="http://legacy-www.swpc.noaa.gov/rt_plots/XrayBL.gif" height="240" width="320"> 
