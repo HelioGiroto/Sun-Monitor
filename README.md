@@ -6,6 +6,8 @@
 
 `curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/Gs_xr_1m.txt | tail` 
 
+https://codepen.io/colombe/pen/aYgMqm
+
  <img src="http://services.swpc.noaa.gov/images/planetary-k-index.gif" alt="Kp Index" height="240" width="320"> 
  <img src="http://legacy-www.swpc.noaa.gov/rt_plots/XrayBL.gif" height="240" width="320"> 
  
