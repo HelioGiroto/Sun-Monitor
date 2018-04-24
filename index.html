@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.democlass {
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<button onclick="myFunction(this)" src="http://www.facebook.com"> Face </button>
+
+<button onclick="myFunction(this)" class="democlass" src="http://www.codepen.io">Hello World</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction(e) {
+    document.getElementById("demo").innerHTML = e.getAttribute("src"); 
+}
+
+// https://stackoverflow.com/questions/24297875/this-getattribute-is-not-a-function
+
+</script>
+
+</body>
+</html>
