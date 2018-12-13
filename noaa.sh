@@ -72,14 +72,23 @@ curl -s https://legacy-www.swpc.noaa.gov/rt_plots/XrayBL.gif | display &
 chromium-browser https://satdat.ngdc.noaa.gov/sxi/archive/browse/special/sxi_g15_latest_01day.mp4 &>/dev/null &
 
 #dia=$(date +%Y%m%d)
-#curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/${dia}_Gs_xr_1m.txt | sort -nrk 7 | head 
+#curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/${dia}_Gp_xr_1m.txt | sort -nrk 7 | head 
 
 # ORDENAR POR MEDIDA DA EXPLOSÃO: 
-# curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/20180217_Gs_xr_1m.txt | sort -nrk 7 | head 
+# curl -s ftp://ftp.swpc.noaa.gov/pub/lists/xray/20180217_Gp_xr_1m.txt | sort -nrk 7 | head 
 
 # Todo o JSON de Kindex:
 # curl -s 'http://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq .
 
 # Todos os últimos valores Kindex - somente os valores:
 # curl -s 'http://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq .[][1] | xargs
+
+# OBS:
+# site correto (GOES 15) das explosões: ftp://ftp.swpc.noaa.gov/pub/lists/xray/Gp_xr_1m.txt (VER ftp://ftp.swpc.noaa.gov/pub/lists/xray/README)
+# Índice: 
+# Coluna Long (última coluna)
+# Formato: 1.40e-08  (onde: e-08 [Qto menor o nro depois de e-0 maior é a explosão]. e-01 é MAIOR que e-09)
+# 			Depois ordena por numero antes de e-0x. 1.40 é MENOR que 9.20 por exemplo. 
+# 
+
 
