@@ -2,7 +2,7 @@
 clear
 # Últimos dados do NOAA sobre explosões solares:
 echo; echo "Último Kindex:"
-curl -s 'http://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq '.[-1:][0][0,1]'
+curl -s 'https://services.swpc.noaa.gov/products/noaa-planetary-k-index.json' | jq '.[-1:][0][0,1]'
 
 site='ftp://ftp.swpc.noaa.gov/pub/lists/xray/Gp_xr_1m.txt'
 
@@ -66,9 +66,9 @@ done
 # ----------------------------------------------------------------------------------------
 
 # Video e fotos:
-curl -s http://services.swpc.noaa.gov/images/swx-overview-small.gif | display &
-curl -s http://services.swpc.noaa.gov/images/planetary-k-index.gif | display &
-curl -s http://legacy-www.swpc.noaa.gov/rt_plots/XrayBL.gif | display &
+curl -s https://services.swpc.noaa.gov/images/swx-overview-small.gif | display &
+curl -s https://services.swpc.noaa.gov/images/planetary-k-index.gif | display &
+curl -s https://legacy-www.swpc.noaa.gov/rt_plots/XrayBL.gif | display &
 chromium-browser https://satdat.ngdc.noaa.gov/sxi/archive/browse/special/sxi_g15_latest_01day.mp4 &>/dev/null &
 
 #dia=$(date +%Y%m%d)
